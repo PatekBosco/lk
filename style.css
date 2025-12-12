@@ -14,7 +14,71 @@
   margin: 20px auto;
   border: 2px solid #c00f74;
   border-radius: 20px;
-  background-color: #fcdeef;
+  overflow: auto;
+  background: linear-gradient(315deg, #5EC8B3 3%, #E2E2E2 38%, #D4D4D4 68%, #F3E072 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 300% 300%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 100%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
 }
 
 .profile-header {
@@ -53,11 +117,15 @@
 .logout-button {
   width: 70px;
   height: 35px;
-  color: white;
-  background-color: #9d9d9c;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #c00f74;
+  /*background-color: #9d9d9c;*/
   border: 1px solid #c00f74;
   border-radius: 20px;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -136,14 +204,17 @@
 .bankruptcy-progress {
   margin: 40px 0;
   padding: 20px;
-  background: #f8f9fa;
+  /*background: #f8f9fa;*/
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .progress-title {
   font-size: 1.2rem;
-  color: #686868;
+  color: #c00f74;
   margin-bottom: 25px;
   text-align: center;
   font-weight: 700;
@@ -236,17 +307,26 @@
 }
 
 .status-current {
-  background: #e3f2fd;
+  /*background: #e3f2fd;*/
   color: #1976d2;
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .status-completed {
-  background: #e8f5e9;
+  /*background: #e8f5e9;*/
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #2e7d32;
 }
 
 .status-pending {
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #616161;
 }
 
@@ -256,7 +336,10 @@
 }
 
 .stage-detail {
-  background: rgb(255, 255, 255);
+  /*background: rgb(255, 255, 255);*/
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -269,16 +352,25 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: #fafafa;
+  /*background: #fafafa;*/
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
 }
 
 .stage-header:hover {
-  background: #f0f0f0;
+  /*background: #f0f0f0;*/
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .stage-header.active {
-  background: #e3f2fd;
+  /*background: #e3f2fd;*/
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #bbe2fb;
 }
 
@@ -341,7 +433,10 @@
 }
 
 .stage-checklist {
-  background: #f8f9fa;
+  /*background: #f8f9fa;*/
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 6px;
   margin-top: 15px;
@@ -457,6 +552,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
+  margin-left: 15px;
   color: #686868;
   font-weight: 500;
 }
@@ -569,10 +665,51 @@
 .auth-box {
   width: 100%;
   max-width: 380px;
-  background: white;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /*border-radius: 10px;*/
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+  /*background-color: white;*/
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /*padding: 24px;*/
+  backdrop-filter: blur(1px) saturate(1.8);
+  border-radius: 16px;
+  /*border: 0.5px solid rgba(255, 255, 255, 0.45);*/
+  border: none;
+  background-color: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px rgba(192, 15, 116,0.35), 0 20px 80px rgba(15,23,42,0.45);
+  color: #fff;
+}
+
+.auth-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 320 320%27><defs><radialGradient id=%27lg-hl%27 cx=%2750%%27 cy=%2750%%27 r=%2750%%27><stop offset=%270%%27 stop-color=%27%23c00f74%27 stop-opacity=%270.35%27/><stop offset=%2770%%27 stop-color=%27%23c00f74%27 stop-opacity=%270.06%27/><stop offset=%27100%%27 stop-color=%27%23c00f74%27 stop-opacity=%270%27/></radialGradient></defs><circle cx=%27160%27 cy=%27160%27 r=%27160%27 fill=%27url(%23lg-hl)%27/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(35px);
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+.auth-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.auth-box > * {
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -581,7 +718,7 @@
 }
 
 .logo h1 {
-  color: #2c3e50;
+  color: #c00f74;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -604,7 +741,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #2c3e50;
+  color: #c00f74;
   font-weight: 500;
 }
 
@@ -622,16 +759,34 @@
 
 .input-with-icon input {
   padding: 12px 12px 12px 45px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  /*border: 2px solid white;*/
+  border-radius: 16px;
   font-size: 16px;
   transition: all 0.3s;
 }
 
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #c00f74;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 .input-with-icon input:focus {
   outline: none;
-  border-color: #e11388;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  /*border-color: #e11388;*/
+  /*box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);*/
 }
 
 .password-toggle {
@@ -653,20 +808,20 @@
 }
 
 .login-button {
-  background: #c00f74;
-  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  color: #c00f74;
   border: none;
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 16px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+ transition: all 0.3s ease-in-out;
   margin-top: 10px;
 }
 
 .login-button:hover {
-  background: #b40e6c;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .auth-footer {
@@ -708,6 +863,132 @@
   }
 }
 
-@media screen and (max-width: 360px) {
-  /* Добавьте адаптивные стили здесь */
+/* Дополнительные стили для блока платежей */
+.glass-container {
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.payment-info h2 {
+    color: #c00f74;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.payment-info p {
+    color: #686868;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.payments-list li {
+    list-style-type: disc;
+    color: #686868;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.details summary {
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem 0;
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+
+.details > ul {
+    margin-top: 0.7rem;
+    padding-left: 1.5rem;
+}
+
+.summary::after {
+    content: '▼';
+    float: right;
+    transform: rotate(-90deg);
+    transition: transform .3s linear;
+}
+
+.details[open] .summary::after {
+    transform: rotate(0deg);
+}
+
+@media screen and (min-width: 1200px) {
+  .content-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  overflow: auto;
+  background: linear-gradient(315deg, #5EC8B3 3%, #E2E2E2 38%, #D4D4D4 68%, #F3E072 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 300% 300%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 100%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+}
 }
