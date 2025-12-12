@@ -162,12 +162,12 @@ function toggleStageDetails(stageNumber) {
 
   // Закрываем другие открытые этапы (опционально)
   // Если нужно, чтобы одновременно мог быть открыт только один этап:
-  // document.querySelectorAll('.stage-content').forEach(el => {
-  //   if (el.id !== `stage-content-${stageNumber}`) {
-  //     el.classList.remove('active');
-  //     el.parentElement.querySelector('.stage-header').classList.remove('active');
-  //   }
-  // });
+  document.querySelectorAll('.stage-content').forEach(el => {
+  if (el.id !== `stage-content-${stageNumber}`) {
+  el.classList.remove('active');
+  el.parentElement.querySelector('.stage-header').classList.remove('active');
+  }
+  });
 }
 
 // Автоматическое открытие текущей стадии при загрузке
@@ -191,3 +191,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
