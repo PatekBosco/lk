@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Личный кабинет должника</title>
+    <link rel="icon" href="assets/favicon_icon.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
 
     <meta property="og:title" content="Личный кабинет должника" />
@@ -15,7 +16,9 @@
     <meta property="og:url" content="https://example.com/" />
   </head>
   <body>
+    <div>
     <main role="main">
+
       <section class="content-container" id="contentContainer">
         <!-- Контейнер авторизации -->
         <div class="auth-container" id="authContainer">
@@ -313,6 +316,22 @@
               </div>
             </div>
           </section>
+
+          <div class="payment-info glass-container">
+        <h2>Платежи по договору</h2>
+        <p>Количество оставшихся платежей: <span id="remaining-payments">3</span></p>
+        <p>Следующая дата платежа: <span id="next-payment-date">20 декабря 2025 г.</span></p>
+        
+        <!-- Раскрывающийся список -->
+        <details>
+            <summary style="color: #c00f74">Подробнее о платежах</summary>
+            <ul class="payments-list">
+                <li>Оплата №1: 10 ноября 2025 г., сумма: 500 руб.</li>
+                <li>Оплата №2: 10 декабря 2025 г., сумма: 500 руб.</li>
+                <li>Оплата №3: 10 января 2026 г., сумма: 500 руб.</li>
+            </ul>
+        </details>
+    </div>
 
           <footer class="contact-info">
             <a href="#" class="contact-link">Написать юристу</a>
